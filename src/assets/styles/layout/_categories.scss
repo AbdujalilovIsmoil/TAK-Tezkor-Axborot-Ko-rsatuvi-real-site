@@ -1,0 +1,40 @@
+.categories {
+  margin-top: 20px;
+  @include mediaQueries(1250px) {
+    display: none;
+  }
+  &__bg {
+    padding: 18px 48px;
+    border-radius: 5px;
+    background-color: $header__bg-color;
+  }
+  &__list {
+    @include flexLayout(flex, space-between, center, 0, default);
+  }
+  &__item {
+    position: relative;
+
+    &::after {
+      top: 7px;
+      width: 6px;
+      content: "";
+      height: 6px;
+      left: -20px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: $categories__color;
+    }
+    &:first-child::after {
+      display: none;
+    }
+  }
+  &__heading {
+    cursor: pointer;
+    display: inline-block;
+    transition: color 300ms linear;
+    @include headingFonts($input__border-color, 12px, 400, normal, default);
+    &:hover {
+      color: $link__active-color;
+    }
+  }
+}

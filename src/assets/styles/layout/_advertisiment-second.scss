@@ -1,0 +1,13 @@
+.advertisiment-second {
+  padding: 10px 0;
+  background-color: $header__bg-color;
+  &__img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    border-radius: 5px;
+    @include mediaQueries($sm) {
+      height: 110px;
+    }
+  }
+}

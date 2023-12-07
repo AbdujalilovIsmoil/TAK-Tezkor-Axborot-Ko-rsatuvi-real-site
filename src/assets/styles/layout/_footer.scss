@@ -1,0 +1,78 @@
+.footer {
+  margin-top: 50px;
+  padding: 40px 0 60px 0;
+  background-color: $footer__bg-color;
+  &-logos {
+    margin-top: 20px;
+    @include flexLayout(flex, flex-start, center, 25px, row nowrap);
+    @include mediaQueries(1020px) {
+      justify-content: center;
+    }
+    @include mediaQueries($sm) {
+      font-size: 18px;
+    }
+    &__item {
+      &-icon {
+        width: 35px;
+        height: 35px;
+        color: $header__bg-color;
+        transition: color 150ms linear;
+        @include mediaQueries($sm) {
+          width: 30px;
+          height: 30px;
+        }
+        &--telegram:hover {
+          color: $telegram__color;
+        }
+        &--instagram:hover {
+          color: rgb(214, 41, 118);
+        }
+        &--youtube:hover {
+          color: $link__active-color;
+        }
+      }
+    }
+  }
+  &__list {
+    &:first-child {
+      max-width: 545px;
+      @include mediaQueries(1020px) {
+        margin: 0 auto;
+      }
+    }
+  }
+  &-container {
+    @include flexLayout(flex, space-between, flex-start, 0, row nowrap);
+    @include mediaQueries(1020px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__item {
+    &-heading {
+      margin-bottom: 30px;
+      @include headingFonts($header__bg-color, 30px, 550, normal, default);
+      @include mediaQueries($sm) {
+        font-size: 25px;
+      }
+    }
+    &-paragraph {
+      margin-bottom: 25px;
+      @include headingFonts($header__bg-color, 20px, 500, normal, default);
+      @include mediaQueries($sm) {
+        font-size: 18px;
+      }
+    }
+    &-link {
+      margin-bottom: 10px;
+      display: inline-block;
+      @include headingFonts($header__bg-color, 20px, 550, normal, default);
+      @include mediaQueries($sm) {
+        font-size: 18px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+body {
+  overflow: visible;
+  position: relative;
+  background-color: $bg__color;
+  font-family: "Rubik", sans-serif;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+}

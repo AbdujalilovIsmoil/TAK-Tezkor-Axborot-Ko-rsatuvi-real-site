@@ -1,0 +1,21 @@
+.swiper-wrapper {
+  position: none !important;
+  overflow: visible !important;
+  padding: 0 0 40px 0;
+}
+
+.swiper-pagination {
+  position: relative;
+  transform: translateY(0);
+}
+
+.swiper-pagination-bullet {
+  background-color: $categories__color !important;
+  background-color: blue !important;
+  height: 12px !important;
+  width: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $link__active-color !important;
+}
